@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns:viz="http://www.gexf.net/1.2draft/viz" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.gephi.org/gexf/1.2draft" xmlns:ns0="xsi" version="1.2" ns0:schemaLocation="http://www.gephi.org/gexf/1.1draft http://gephi.org/gexf/1.2draft.xsd">
+  <meta lastmodified="2018-04-17">
+    <creator>Gephi.org</creator>
+    <description>A Web network</description>
+  </meta>
+  <graph defaultedgetype="directed" label="A Web network" mode="static" timeformat="double">
+    <attributes class="node" mode="static">
+      <attribute id="0" title="url" type="string"/>
+      <attribute id="1" title="indegree" type="float"/>
+      <attribute id="2" title="frog" type="boolean">
+        <default>true</default>
+      </attribute>
+    </attributes>
+    <nodes>
+      <node id="0" label="Gephi">
+        <attvalues>
+          <attvalue for="0" value="http://gephi.org"/>
+          <attvalue for="1" value="1"/>
+        </attvalues>
+      </node>
+      <node id="1" label="Webatlas">
+        <attvalues>
+          <attvalue for="0" value="http://webatlas.fr"/>
+          <attvalue for="1" value="2"/>
+        </attvalues>
+      </node>
+      <node id="2" label="RTGI">
+        <attvalues>
+          <attvalue for="0" value="http://rtgi.fr"/>
+          <attvalue for="1" value="1"/>
+        </attvalues>
+      </node>
+      <node id="3" label="BarabasiLab">
+        <attvalues>
+          <attvalue for="0" value="http://barabasilab.com"/>
+          <attvalue for="1" value="1"/>
+          <attvalue for="2" value="false"/>
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge id="0" source="0" target="1" weight="1"/>
+      <edge id="1" source="0" target="2" weight="1"/>
+      <edge id="2" source="1" target="0" weight="1"/>
+      <edge id="3" source="2" target="1" weight="1"/>
+      <edge id="4" source="0" target="3" weight="1"/>
+    </edges>
+  </graph>
+</gexf>

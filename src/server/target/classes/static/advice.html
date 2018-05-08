@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PPAS | 患者画像分析系统</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link rel="shortcut icon" href="titlepic.ico">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <h2 class="text-left" style="color:azure">PPAS</h2>
+                            <h3 class="text-left" style="color:darkcyan">患者画像分析系统</h3>
+
+                        </div>
+                        <div class="logo-element">
+                            PPAS
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-th-large"></i>
+                            <span class="nav-label">患者基本信息</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="statistics.html">
+                            <i class="fa fa-pie-chart"></i>
+                            <span class="nav-label">统计数据参考</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fa fa-tag"></i>
+                            <span class="nav-label">患者标签分析</span>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="clustering.html">
+                            <i class="fa fa-cube"></i>
+                            <span class="nav-label">疾病聚类分析</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="relations.html">
+                            <i class="fa fa-link"></i>
+                            <span class="nav-label">疾病关联分析</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <li class="active">
+                            <a href="advice.html">
+                                <i class="fa fa-flask"></i>
+                                <span class="nav-label">医嘱与建议</span>
+                            </a>
+                        </li>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            <i class="fa fa-info-circle"></i>
+                            <span class="nav-label">关于PPAS</span>
+                        </a>
+                    </li>
+
+
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top panel-primary" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="advice.html#">
+                            <i class="fa fa-bars"></i>
+                        </a>
+
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <a href="login.html">
+                                <i class="fa fa-sign-out"></i> 重新查询
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+
+            <div class="row  border-bottom white-bg dashboard-header">
+
+                <div class="col-sm-4">
+                    <h2><strong>医嘱与建议</strong></h2>
+                    <small>来自您病历记录的医嘱与相关疾病建议。</small>
+                    </div>
+
+
+
+
+            </div>
+
+
+
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row"> 
+                        <div class="col-lg-6">
+                                <div class="ibox float-e-margins">
+                                    <div class="ibox-title">
+                                        <h5>病历信息</h5>
+                                    </div>
+                                    <div class="ibox-content">
+                                            <h3 id="adviceresult">Lorem ipsum <strong>eget urna mollis</strong> ornare vel eu leo. <em>Cum sociisnatoque penatibus</em> et magnis dis parturient montes, <code>code</code> nascetur
+                                                ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Sed euismod aliquet sapien consequat tincidunt.</h3>
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                                <div class="ibox float-e-margins">
+                                    <div class="ibox-title">
+                                        <h5>疾病建议</h5>
+                                    </div>
+                                    <div class="ibox-content">
+                                            <h3 id="adviceresult2">Lorem ipsum <strong>eget urna mollis</strong> ornare vel eu leo. <em>Cum sociisnatoque penatibus</em> et magnis dis parturient montes, <code>code</code> nascetur
+                                                ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit. Sed euismod aliquet sapien consequat tincidunt.</h3>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+            </div>
+
+            <div class="footer fixed">
+                <div class="pull-right">
+                    <strong>测试版本，仅供演示 </strong>&copy; 2018-2099
+                </div>
+                <div>
+                    <strong>IDC@CHZU</strong> 滁州学院分布式计算研究组
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Flot -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="js/plugins/flot/jquery.flot.symbol.js"></script>
+    <script src="js/plugins/flot/jquery.flot.time.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+	<script type="text/javascript" src="js/myjs.js"></script>
+	<script>adviceload();</script>
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+
+</body>
+
+</html>

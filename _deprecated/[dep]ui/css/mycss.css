@@ -1,0 +1,4 @@
+.content-secondary {
+  .make-md-column(3);
+  .make-md-column-offset(1);
+}

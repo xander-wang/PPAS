@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>PPAS | 患者画像分析系统
+	</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+	<link rel="shortcut icon" href="titlepic.ico">
+	<link href="css/animate.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<script src="js/jquery-2.1.1.js"></script>
+
+
+</head>
+
+<body class="gray-bg">
+
+	<div class="loginColumns animated fadeInDown">
+		<div class="row">
+
+			<div class="col-md-6">
+				<h2 class="font-bold">欢迎使用患者画像分析系统</h2>
+
+				<p>
+					我们利用大数据技术，
+				</p>
+
+				<p>基于您的各项基础数据为您带来更为全面的健康评估。
+				</p>
+
+				<p class="font-bold">
+					请输入您的姓名及健康卡号以获取关于您健康的各项信息。
+				</p>
+
+				<p class="font-bold">
+					分析结果仅供参考，请谨遵医嘱。
+				</p>
+
+				<p>
+					<small>我们仅提供健康信息及其分析结果的查询服务。
+						<br>
+					</small>
+					<small>本系统仍为测试版本，仅供演示。
+						<br>
+						<br>
+					</small>
+					</small>
+					<small>提供三组测试数据以供测试：
+						<br>
+					</small>
+					</small>
+					<small>杨海宁，420982197911070119
+						<br>
+					</small>
+					<small>刘水庚，110107197812260615
+						<br>
+					</small>
+					<small>杨卫东，210824197207180025
+					</small>
+				</p>
+
+			</div>
+			<div class="col-md-6">
+				<div class="ibox-content">
+					<form class="m-t" role="form" action="index.html" name="loginform" onkeydown="if(event.keyCode==13) return false;">
+						<div class="form-group">
+							<input type="text" class="form-control" name="loginname" placeholder="姓名" required="" id="ceshiname">
+						</div>
+
+						<div class="form-group">
+							<input type="text" class="form-control" name="loginid" placeholder="健康卡号" required="" id="ceshikahao" onkeydown="if(event.keyCode==13) clicklogin();">
+						</div>
+						<button type="button" class="btn btn-info block full-width m-b" onclick="getlogindata();">载入测试值</button>
+						<button type="button" class="btn btn-primary block full-width m-b" onclick="clicklogin();">确认</button>
+					</form>
+
+				</div>
+			</div>
+		</div>
+		<hr/>
+		<div class="row">
+			<div class="col-md-6">
+				IDC@CHZU | 滁州学院分布式计算研究组
+			</div>
+			<div class="col-md-6 text-right">
+				<small>&copy; 2018-2099</small>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/echarts-gl.min.js"></script>
+	<script type="text/javascript" src="js/echarts.min.js"></script>
+	<script type="text/javascript" src="js/myjs.js"></script>
+
+</body>
+
+</html>

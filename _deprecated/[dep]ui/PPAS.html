@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="患者大数据系统,用于查询患者信息">
+		<meta name="keywords" content="患者画像，医疗大数据，设计大赛">
+		<meta name="HandheldFriendly" content="True">
+		<title>PPAS</title>
+		<link rel="shortcut icon" href="titlepic.ico">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.css">
+		<link rel="stylesheet" href="css/mycss.css">
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/echarts.js"></script>
+		<script type="text/javascript" src="importdata.js"></script>
+		<style type="text/css">  
+			@font-face {  
+			 font-family:'EnglishFont';  
+			 src: url("fonts/sf-pro-text_medium.woff2") /* EOT file for IE */  
+			}  
+			@font-face {  
+			 font-family:'ChinaFont';  
+			 src: url("fonts/PingFangSC-Regular.woff2") /* TTF file for CSS3 browsers */  
+			} 
+			@font-face {  
+			 font-family:'EnglishFont1';  
+			 src: url("font/SF-Pro-Display-Medium.otf") /* TTF file for CSS3 browsers */  
+			}   
+		</style>   
+	</head>
+
+	<body style="font-size: 14px;background-color:#F3F3FA;font-family:'EnglishFont','ChinaFont';">
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid" style="text-align: center;">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        		  <span class="sr-only">Toggle navigation</span>
+        		  <span class="icon-bar"></span>
+        		  <span class="icon-bar"></span>
+        		  <span class="icon-bar"></span>
+     		</button>
+					<a class="navbar-brand" href="#" ;>PPAS | 患者画像分析系统</a>
+				</div>
+				<div class="collapse navbar-collapse" id="main-menu">
+					<ul class="nav navbar-nav" style="display: inline-block;float: left;">
+						<li class="active">
+							<a href="#">患者查询 <span class="sr-only">(current)</span></a>
+						</li>
+						<li>
+							<a href="2.html">统计查询</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">关于 <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">XXX</a>
+								</li>
+								<li>
+									<a href="#">Another XXX</a>
+								</li>
+								<li>
+									<a href="#">Something else here</a>
+								</li>
+								<li role="separator" class="divider"></li>
+								<li>
+									<a href="#">X</a>
+								</li>
+								<li role="separator" class="divider"></li>
+								<li>
+									<a href="#">XX</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+					<form class="navbar-form navbar-right">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+						<button type="submit" class="btn btn-default">Submit</button>
+					</form>
+					</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<br />
+		<br />
+		<div class="container">
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<form name='myform' onkeydown="if(event.keyCode==13) return false;">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="请输入用户编号" id='inputdata' name='inputid' onkeydown="if(event.keyCode==13) dotask();">
+						</div> 
+					</form>
+				</div>
+			</div> 
+		</div>
+		<br />
+		<div class="container" id="maindiv" style="visibility: hidden;">
+			<div class="row">
+  				<div class="col-sm-8">
+    					<div class="row">
+    	  					<div class="col-sm-4 column" style="background-color:#FFFFFF;-webkit-box-shadow:0 -2px 0px darkgrey,0 0px 1px darkgrey;margin-bottom:10px; ">
+								<div>
+									<h4><b>个人信息</b></h4>
+								</div>
+								<div style="width:100%; height:10px; border-top:1px solid #999; clear:both;"></div>
+								<table class="table table-striped">
+								  <tr>
+								    <th id="patientName">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</th>
+								  </tr>
+								  <tr>
+								    <th>年&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;龄：</td>
+								  </tr>
+								  <tr>
+								    <th id="genderCode">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</td>
+								  </tr>
+								  <tr>
+								    <th>出生日期：</th>
+								  </tr>
+								  <tr>
+								    <th id="postalCode">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;编：</th>
+								  </tr>
+								  <tr>
+								    <th id="patientTel">手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机：</th>
+								  </tr>
+								  <tr>
+								    <th id="healthCardNumber">健康卡号：</th>
+								  </tr>
+								  <tr>
+								    <th>身份证号：</th>
+								  </tr>
+								</table>
+							</div>
+
+			      			<div class="col-sm-offset-5 column " id="chart" style="width:280px;height:360px;background-color:#FFFFFF;-webkit-box-shadow:0 -2px 0px darkgrey,0 0px 1px darkgrey; ">			
+							</div>
+			    		</div>
+			  	</div>
+			  	<div class="col-sm-offset-8 column" id="chart1" style="width:350px;height:360px;background-color:#FFFFFF;-webkit-box-shadow:0 -2px 0px darkgrey,0 0px 1px darkgrey; ">			
+				</div>				
+			</div>
+			<br />
+			<div class="row clearfix">
+				<br />
+				<div class="col-sm-7" style="background-color:#FFFFFF;-webkit-box-shadow:0 -2px 0px darkgrey,0 0px 1px darkgrey; ">
+		   			<div class="row">
+		      			<div class="col-xs-4 col-sm-4">
+		      				<div>
+									<h3><b>患病率</b></h3>
+							</div>
+							<br />
+							<table class="table table-striped">
+							  <tr>
+							    <th>年龄</th>
+							    <th>患病率</th>
+							  </tr>
+							  <tr>
+							    <th>0-19岁</th>
+							    <td>1.47%</td>
+							  </tr>
+							  <tr>
+							    <th>20-39岁</th>
+							    <td>4.32%</td>
+							  </tr>
+							  <tr>
+							    <th>40-59岁</th>
+							    <td>7.21%</td>
+							  </tr>
+							  <tr>
+							    <th>60岁以上</th>
+							    <td>27.3%</td>
+							  </tr>
+							</table>
+							<div style="color: red;"><h2>我们判断:<br />您是心脑血管高危人群！</h2></div>
+		     			</div>
+		      			<div class="col-xs-4 col-sm-6" id="huanbing" style="width:450px;height:405px;">
+		      			</div>
+		    		</div>
+		  		</div>
+				<div class="col-xs-offset-8 column" style="background-color:#FFFFFF;-webkit-box-shadow:0 -2px 0px darkgrey,0 0px 1px darkgrey;">
+					<h4><b>入院记录查询</b></h4>
+					<form action="form_action.asp" method="get">
+					  <input type="text" class="form-control" placeholder="请输入查询年份" name="ruyuanshijian" />
+					  <div style="margin:0 auto;width:60px;">
+					  	<input type="button" value="查询" onclick="visibleform();">					  		
+					  	</input>				  	
+					  </div>
+					</form>
+					<table class="table table-striped" style="visibility: hidden;" id="biaodan">
+							  <tr>
+							    <th>入院时间（年-月-日）</th>
+							    <th>住院时间（天）</th>
+							  </tr>
+							  <tr>
+							    <th>1999-6-13</th>
+							    <td>3</td>
+							  </tr>
+							  <tr>
+							    <th>1999-7-2</th>
+							    <td>14</td>
+							  </tr>
+							  <tr>
+							    <th>1999-8-10</th>
+							    <td>7</td>
+							  </tr>
+							</table>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

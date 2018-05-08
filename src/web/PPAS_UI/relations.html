@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PPAS | 患者画像分析系统</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <h2 class="text-left" style="color:azure">PPAS</h2>
+                            <h3 class="text-left" style="color:darkcyan">患者画像分析系统</h3>
+
+                        </div>
+                        <div class="logo-element">
+                            PPAS
+                        </div>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <i class="fa fa-th-large"></i>
+                            <span class="nav-label">患者基本信息</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="statistics.html">
+                            <i class="fa fa-pie-chart"></i>
+                            <span class="nav-label">统计数据参考</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fa fa-tag"></i>
+                            <span class="nav-label">患者标签分析</span>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="clustering.html">
+                            <i class="fa fa-cube"></i>
+                            <span class="nav-label">疾病聚类分析</span>
+                        </a>
+                    </li>
+                    <li>
+                        <li class="active">
+                            <a href="relations.html">
+                                <i class="fa fa-link"></i>
+                                <span class="nav-label">疾病关联分析</span>
+                            </a>
+                        </li>
+                    </li>
+
+                    <li>
+                        <a href="advice.html">
+                            <i class="fa fa-flask"></i>
+                            <span class="nav-label">医嘱与建议</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html">
+                            <i class="fa fa-info-circle"></i>
+                            <span class="nav-label">关于PPAS</span>
+                        </a>
+                    </li>
+
+
+
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top panel-primary" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="dashboard_5.html#">
+                            <i class="fa fa-bars"></i>
+                        </a>
+
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <a href="login.html">
+                                <i class="fa fa-sign-out"></i> 重新查询
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+
+            <div class="row  border-bottom white-bg dashboard-header">
+
+                <div class="col-sm-4">
+                    <h2>
+                        <strong>疾病关联分析</strong>
+                    </h2>
+                    <small>基于众多患者所患疾病的关联分析，
+                        <br>利用智能算法以得到典型病症间的隐性关联。</small>
+                </div>
+
+            </div>
+
+
+
+            <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>典型疾病列表</h5>
+                            </div>
+                            <div class="ibox-content">
+                                    <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>序号</th>
+                                                    <th>ICD编码</th>
+                                                    <th>疾病名称</th>
+                                                    <th>患者比例</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><span class="label label-default">1</span></td>
+                                                    <td><span class="label label-primary">B</span></td>
+                                                    <td>呼吸系统疾病</td>
+                                                    <td><span class="pie" style="display: none;">0.52/1.561</span><svg class="peity" height="16" width="16"><path d="M 8 8 L 8 0 A 8 8 0 0 1 14.933563796318165 11.990700825968545 Z" fill="#1ab394"></path><path d="M 8 8 L 14.933563796318165 11.990700825968545 A 8 8 0 1 1 7.999999999999998 0 Z" fill="#d7d7d7"></path></svg>&emsp;35%</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="label label-default">2</span></td>
+                                                    <td><span class="label label-primary">P</span></td>                                                    <td>神经系统疾病</td>
+                                                    <td><span class="pie" style="display: none;">0.52/1.561</span><svg class="peity" height="16" width="16"><path d="M 8 8 L 8 0 A 8 8 0 0 1 14.933563796318165 11.990700825968545 Z" fill="#1ab394"></path><path d="M 8 8 L 14.933563796318165 11.990700825968545 A 8 8 0 1 1 7.999999999999998 0 Z" fill="#d7d7d7"></path></svg>&emsp;35%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="label label-default">3</span></td>
+                                                    <td><span class="label label-primary">C</span></td>                                                    <td>外伤</td>
+                                                    <td><span class="pie" style="display: none;">0.52/1.561</span><svg class="peity" height="16" width="16"><path d="M 8 8 L 8 0 A 8 8 0 0 1 14.933563796318165 11.990700825968545 Z" fill="#1ab394"></path><path d="M 8 8 L 14.933563796318165 11.990700825968545 A 8 8 0 1 1 7.999999999999998 0 Z" fill="#d7d7d7"></path></svg>&emsp;35%</td>
+                                                </tr>
+                                                                                        </tbody>
+                                        </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>典型疾病组合</h5>
+                            </div>
+                            <div class="ibox-content">
+                                    <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>疾病数量</th>
+                                                    <th>疾病组合</th>
+                                                    <th>患者比例</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><span class="label label-default">1</span></td>
+                                                    <td><span class="label label-primary">呼吸系统疾病</span></td>
+                                                    <td><span class="pie" style="display: none;">0.52/1.561</span><svg class="peity" height="16" width="16"><path d="M 8 8 L 8 0 A 8 8 0 0 1 14.933563796318165 11.990700825968545 Z" fill="#1ab394"></path><path d="M 8 8 L 14.933563796318165 11.990700825968545 A 8 8 0 1 1 7.999999999999998 0 Z" fill="#d7d7d7"></path></svg>&emsp;35%</td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="label label-default">2</span></td>
+                                                    <td><span class="label label-primary">呼吸系统疾病</span>
+                                                        <span class="label label-primary">内分泌系统疾病</span>
+                                                    </td>
+                                                    <td><span class="pie" style="display: none;">0.52/1.561</span><svg class="peity" height="16" width="16"><path d="M 8 8 L 8 0 A 8 8 0 0 1 14.933563796318165 11.990700825968545 Z" fill="#1ab394"></path><path d="M 8 8 L 14.933563796318165 11.990700825968545 A 8 8 0 1 1 7.999999999999998 0 Z" fill="#d7d7d7"></path></svg>&emsp;35%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span class="label label-default">3</span></td>
+                                                    <td><span class="label label-primary">神经系统疾病</span>
+                                                        <span class="label label-primary">内分泌系统疾病</span>
+                                                        <span class="label label-primary">生殖系统疾病</span>
+                                                    </td>
+                                                    <td><span class="pie" style="display: none;">0.52/1.561</span><svg class="peity" height="16" width="16"><path d="M 8 8 L 8 0 A 8 8 0 0 1 14.933563796318165 11.990700825968545 Z" fill="#1ab394"></path><path d="M 8 8 L 14.933563796318165 11.990700825968545 A 8 8 0 1 1 7.999999999999998 0 Z" fill="#d7d7d7"></path></svg>&emsp;35%</td>
+                                                </tr>
+                                                                                        </tbody>
+                                        </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-12">
+                        <div class="ibox float-e-margins">
+                            <div class="ibox-title">
+                                <h5>疾病关联推测</h5>
+                            </div>
+                            <div class="ibox-content">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                关联列表
+                                            </div>
+                                            <div class="panel-body">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="footer fixed">
+                <div class="pull-right">
+                    <strong>测试版本，仅供演示 </strong>&copy; 2018-2099
+                </div>
+                <div>
+                    <strong>IDC@CHZU</strong> 滁州学院分布式计算研究组
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Mainly scripts -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Flot -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="js/plugins/flot/jquery.flot.symbol.js"></script>
+    <script src="js/plugins/flot/jquery.flot.time.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+</body>
+
+</html>
